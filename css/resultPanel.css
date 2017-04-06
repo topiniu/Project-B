@@ -20,8 +20,7 @@
 
     top:50%;
     left:50%;
-    margin-top:-125px;
-    margin-left:-300px;
+    transform: translate(-50%,-50%);
 
 
     display: none;
@@ -54,10 +53,9 @@
     height: 100%;
     color: white;
     text-decoration: none;
-    line-height: 70px;
+    /*line-height: 70px;*/
     vertical-align: center;
     text-align: center;
-    font-size: 2em;
     border-radius: 0 0 10px 10px ;
 
     transition: all .5s;
@@ -65,6 +63,12 @@
 #resultPanel div:nth-child(2) a:hover{
     background-color: white;
     color: #283018;
+}
+#resultPanel div:nth-child(2) a p{
+    position: relative;
+    top:50%;
+    transform: translate(0,-50%);
+    font-size: 2em;
 }
 .touch{
     background-color: #283018;
@@ -76,6 +80,10 @@
 }
 @media screen and (max-width: 767px){
 
+    #resultPanel{
+        width:90%;
+        height:40%;
+    }
     #resultPanel div:nth-child(2) a:hover{
         background-color: #283018;
         color: white;
