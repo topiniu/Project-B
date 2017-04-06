@@ -2,43 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Project B</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/ItemClazz.js"></script>
+    <link rel="stylesheet" href="css/resultPanel.css">
 </head>
 <body>
 <div id="container">
-    <div id="screenPanel">
-        <!--<div class="item clz1">-->
-            <!--<p>麻辣香锅</p>-->
-        <!--</div>-->
-        <!--<div class="item clz6">-->
-            <!--<p>麻辣香锅</p>-->
-        <!--</div>-->
-        <!--<div class="item clz3">-->
-            <!--<p>麻辣香锅</p>-->
-        <!--</div>-->
-        <!--<div class="item clz2">-->
-            <!--<p>麻辣香锅</p>-->
-        <!--</div>-->
-        <!--<div class="item clz4">-->
-            <!--<p>麻辣香锅</p>-->
-        <!--</div>-->
-        <!--<div class="item clz1">-->
-            <!--<p>麻辣香锅</p>-->
-        <!--</div>-->
-        <!--<div class="item clz6">-->
-            <!--<p>麻辣香锅</p>-->
-        <!--</div>-->
-        <!--<div class="item clz3">-->
-            <!--<p>麻辣香锅</p>-->
-        <!--</div>-->
+    <!--<div class="resultCanva">-->
+        <div id="resultPanel">
+            <div id="result">
+                <p id="resultBox">大盘鸡</p>
+            </div>
+
+            <div id="btnContainer">
+                <a id="reChoseBtn" href="#" onclick="reChose()">
+                    换一个
+                </a>
+
+            </div>
+        </div>
+    <!--</div>-->
+
+    <div id="screenPanel" class="mainPanel">
+
     </div>
 
-    <div id="btnPanel">
-        <a id="btn" href="#">
+    <div id="btnPanel" class="mainPanel">
+        <a id="btn" href="#" onclick="chose()">
             <p>吃什么呢？</p>
         </a>
     </div>

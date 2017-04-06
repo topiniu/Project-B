@@ -11,7 +11,7 @@ function createItem(name){
     $(div).addClass("item");
     // $(div).addClass("hideBottom");
 
-    var clzNum = parseInt(Math.random()*6,10)+1;
+    var clzNum = parseInt(Math.random()*10,10)+1;
     $(div).addClass("clz" + clzNum);
 
     var left = parseInt(Math.random()*80,10)+1;

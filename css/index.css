@@ -11,20 +11,21 @@ html,body{
 }
 #container{
     display: block;
-    width:80%;
+    width:100%;
     height:100%;
-    border: 2px solid blue;
-    margin:0 auto;
+    /*border: 2px solid blue;*/
+    /*margin:0 auto;*/
 }
 
 #screenPanel{
     position: relative;
     width:100%;
-    height:80%;
+    height:100%;
 
+    display: none;
+    
     overflow: hidden;
-
-    border: 2px solid red;
+    /*border: 2px solid red;*/
 }
 
 .item{
@@ -32,8 +33,9 @@ html,body{
     display: inline-block;
     padding: 20px 20px;
     bottom: 0;
+    top:100%;
 
-    animation-name: move;
+    /*animation-name: move;*/
     animation-timing-function: ease-in;
     animation-iteration-count: infinite;
 }
@@ -42,23 +44,27 @@ html,body{
 }
 
 #btnPanel{
-    position: relative;
-    left: 50%;
-    margin-left: -20em;
+    position: absolute;
+    width:100%;
+    /*left: 50%;*/
+    /*margin-left: -20em;*/
     margin-top:1em;
     display: inline-block;
     text-align: center;
-    border: 2px solid green;
+    bottom:2em;
+    border:1px solid forestgreen;
+
+    transition:all .3s;
 }
 #btn{
     position: relative;
     display: block;
     text-decoration: none;
-    width:40em;
-    height:6em;
+    width:100%;
+    height:40%;
     line-height: 6em;
+
     color: #ffffff;
-    border:1px solid forestgreen;
     cursor: pointer;
 
     background: forestgreen;
@@ -66,6 +72,11 @@ html,body{
     transition: all .5s;
 }
 #btn:hover{
+    background: white;
+    color: forestgreen;
+}
+
+.btnTouch{
     background: white;
     color: forestgreen;
 }
@@ -82,7 +93,7 @@ html,body{
     color: rgba(86, 181, 61, 0.74);
     /*left: 0.7em;*/
 
-    animation-duration: 3s;
+    animation-duration: 5s;
     /*animation-timing-function: linear;*/
     animation-delay: .3s;
     /*animation-iteration-count: infinite;*/
@@ -100,7 +111,7 @@ html,body{
     color: rgba(209, 62, 66, 0.98);
     /*left: 1.2em;*/
 
-    animation-duration: 4s;
+    animation-duration: 6s;
     /*animation-timing-function: linear;*/
     animation-delay: 0s;
     /*animation-iteration-count: infinite;*/
@@ -119,7 +130,7 @@ html,body{
     color: rgba(75, 133, 209, 0.7);
     /*left: 1.6em;*/
 
-    animation-duration: 2s;
+    animation-duration: 4s;
     /*animation-timing-function: linear;*/
     animation-delay: .5s;
     /*animation-iteration-count: infinite;*/
@@ -138,7 +149,7 @@ html,body{
     color: rgba(209, 201, 51, 0.73);
     /*left: 2.3em;*/
 
-    animation-duration: 3.5s;
+    animation-duration: 4.8s;
     /*animation-timing-function: linear;*/
     animation-delay: .6s;
     /*animation-iteration-count: infinite;*/
@@ -157,7 +168,7 @@ html,body{
     color: rgba(73, 209, 206, 0.6);
     /*right:0.4em;*/
 
-    animation-duration: 4s;
+    animation-duration: 3s;
     /*animation-timing-function: linear;*/
     animation-delay: .8s;
     /*animation-iteration-count: infinite;*/
@@ -174,32 +185,55 @@ html,body{
     font-weight: bold;
 
     color: rgba(209, 93, 205, 0.76);
-    /*right: 3.8em;*/
 
-    animation-duration: 2.5s;
-    /*animation-timing-function: linear;*/
+    animation-duration: 5s;
     animation-delay: .2s;
-    /*animation-iteration-count: infinite;*/
-
-
-
-    /*animation: move 2.5s linear .2s infinite;*/
-
-    /*transition: all 1.2s;*/
 }
 
-.hideTop{
-    top:-50% !important;
-    opacity: 0.3;
+.clz7{
+
+    font-size:3.8em;
+    font-weight: bold;
+
+    color: rgba(134, 145, 18, 0.76);
+
+    animation-duration: 5.5s;
+    animation-delay: 0s;
 }
 
-.hideBottom{
-    top:100%
+.clz8{
+
+    font-size:3.8em;
+    font-weight: bold;
+
+    color: rgba(46, 133, 209, 0.76);
+
+    animation-duration: 2s;
+    animation-delay: 0s;
+}
+.clz9{
+
+    font-size:1.5em;
+    font-weight: bold;
+
+    color: rgba(56, 209, 96, 0.76);
+
+    animation-duration: 3s;
+    animation-delay: 0s;
 }
 
-.show{
-    top:auto;
+.clz10{
+
+    font-size:4.4em;
+    font-weight: bold;
+
+    color: rgba(209, 93, 205, 0.76);
+
+    animation-duration: 5.6s;
+    animation-delay: 1s;
 }
+
+
 
 @keyframes move {
     0% {top:100%;opacity: 1;}
@@ -207,4 +241,11 @@ html,body{
     /*60% {top:45%;opacity: 0.5;}*/
     95% {top:5%;opacity: 0;}
     100% {top:100%;opacity: 0;}
+}
+@media screen and (max-width: 767px){
+
+    #btn:hover{
+        background: forestgreen;
+        color: white;
+    }
 }
