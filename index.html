@@ -9,32 +9,55 @@
     <script src="js/index.js"></script>
     <script src="js/ItemClazz.js"></script>
     <link rel="stylesheet" href="css/resultPanel.css">
+    <link rel="stylesheet" href="css/editDataPanel.css">
 </head>
 <body>
-<div id="container">
-    <!--<div class="resultCanva">-->
-        <div id="resultPanel">
-            <div id="result">
-                <p id="resultBox">大盘鸡</p>
-            </div>
+<!--<div id="container">-->
+    <!--&lt;!&ndash;<div class="resultCanva">&ndash;&gt;-->
+        <!--<div id="resultPanel">-->
+            <!--<div id="result">-->
+                <!--<p id="resultBox">大盘鸡</p>-->
+            <!--</div>-->
 
-            <div id="btnContainer">
-                <a id="reChoseBtn" href="#" onclick="reChose()">
-                    <p>换一个</p>
-                </a>
+            <!--<div id="btnContainer">-->
+                <!--<a id="reChoseBtn" href="#" onclick="reChose()">-->
+                    <!--<p>换一个</p>-->
+                <!--</a>-->
 
-            </div>
-        </div>
+            <!--</div>-->
+        <!--</div>-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+    <!--<div id="screenPanel" class="mainPanel">-->
+
     <!--</div>-->
 
-    <div id="screenPanel" class="mainPanel">
-
-    </div>
-
-    <div id="btnPanel" class="mainPanel">
-        <a id="btn" href="#" onclick="chose()">
-            <p>吃什么呢</p>
-        </a>
+    <!--<div id="btnPanel" class="mainPanel">-->
+        <!--<a class="btn" id="choseBtn" href="#" onclick="chose()">-->
+            <!--<p>吃什么呢</p>-->
+        <!--</a>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<div id="editBtnBox">-->
+    <!--<a class="btn">-->
+        <!--<p>编辑数据</p>-->
+    <!--</a>-->
+<!--</div>-->
+<div id="editPanel">
+    <div id="rowContainer">
+        <div class="row clearfix">
+            <span class="inputContainer">
+                <input type="text" data-index="1" value="大盘鸡" readonly>
+            </span>
+            <span class="btnContainer">
+                <button class="editBtn">
+                    修改
+                </button>
+                <button class="delBtn" data-index="1">
+                    删除
+                </button>
+            </span>
+        </div>
     </div>
 </div>
 </body>

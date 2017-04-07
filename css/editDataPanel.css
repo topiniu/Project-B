@@ -1,0 +1,43 @@
+#editPanel{
+    position: absolute;
+    width:100%;
+    height:100%;
+
+    background-color: rgba(0,0,0,0.5);
+}
+#rowContainer{
+    position: relative;
+    width:80%;
+
+    background-color: white;
+
+    left:50%;
+    transform: translate(-50%);
+
+    text-align: center;
+}
+
+#editPanel .row{
+    position: relative;
+    width:80%;
+
+    min-height:50px;
+
+    border-radius:10px;
+    border: 1px solid royalblue;
+}
+.inputContainer input{
+    font-size: 1.2em;
+}
+
+
+.clearfix{
+    zoom: 1;
+}
+.clearfix:after{
+    content: '';
+    visibility: hidden;
+    display: block;
+    clear: both;
+    height:0;
+}

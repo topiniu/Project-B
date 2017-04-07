@@ -56,14 +56,14 @@ html,body{
 
     transition:all .3s;
 }
-#btn{
+.btn{
     position: relative;
     display: block;
     text-decoration: none;
     width:100%;
     height:40%;
     /*line-height: 6em;*/
-
+    text-align: center;
     color: #ffffff;
     cursor: pointer;
 
@@ -71,7 +71,7 @@ html,body{
 
     transition: all .5s;
 }
-#btn:hover{
+.btn:hover{
     background: white;
     color: forestgreen;
 }
@@ -80,7 +80,7 @@ html,body{
     background: white;
     color: forestgreen;
 }
-#btn p{
+.btn p{
     position: relative;
     font-size:3em;
     margin:0;
@@ -232,6 +232,17 @@ html,body{
 
     animation-duration: 5.6s;
     animation-delay: 1s;
+}
+#editBtnBox{
+    margin-bottom:20px;
+}
+#editBtnBox a{
+    background-color: red;
+    border:1px solid red;
+}
+#editBtnBox a:hover{
+    background-color: white;
+    color: red;
 }
 
 
