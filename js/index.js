@@ -8,6 +8,7 @@ function getData(){
     xhr.onreadystatechange = function(){
         if(xhr.readyState===4 && xhr.responseText != ""){
             data = (xhr.responseText).split(",");
+            // console.log(data);
         }
     }
 
@@ -84,7 +85,7 @@ function chose(){
         $(".mainPanel").fadeOut();
         $("#resultPanel").slideDown();
 
-    },parseInt(Math.random()*4001+3000,10));
+    },parseInt(Math.random()*1501+2500,10));
 
 }
 
