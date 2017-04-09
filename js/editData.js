@@ -21,7 +21,7 @@ function pageLoad(flag){
         if(pageFlag<0)//进行删除操作时length减小
             pageFlag=0;
     }else{
-        pageFlag=0;
+        // pageFlag=0;
     }
 
     for(var i = pageFlag;pageFlag<data.length && pageFlag<i+10;pageFlag++){
@@ -81,5 +81,30 @@ function del(e){
 function hideEdit(){
     $("#editPanel").fadeOut("fast");
     $(".userPanel").fadeIn("fast");
+
+}
+function showAddPanel(){
+    $("#addPanel").fadeIn();
+}
+function closeAddPanel() {
+    $("#addPanel").fadeOut();
+}
+function addItem() {
+  var newVal = $("#addName").val();var showMe = $("#showMeddage");
+  if(newVal!=""){
+      data[data.length] = newVal;
+      showMe.text("已保存");
+      showMe.fadeIn();
+      setTimeout(function () {
+          showMe.fadeOut();
+      },1000);
+  }else{
+
+      showMe.text("不能为空");
+      showMe.fadeIn();
+      setTimeout(function () {
+          showMe.fadeOut();
+      },1000);
+  }
 
 }

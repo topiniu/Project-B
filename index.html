@@ -46,20 +46,38 @@
     </a>
 </div>
 <div class="clearfix" id="editPanel">
+    <div id="addPanel">
+        <div class="box">
+            <input type="text" id="addName" placeholder="在这里输入菜名">
+            <div class="btnBox clearfix">
+                <button class="addPanelBtn" onclick="addItem()">
+                    确定添加
+                </button>
+                <button class="addPanelBtn" onclick="closeAddPanel()">
+                    关闭
+                </button>
+            </div>
+            <span id="showMeddage">
+
+            </span>
+        </div>
+    </div>
     <div id="rowContainer">
 
     </div>
-    <div>
-
-    </div>
-    <div id="pageBtnContainer" class="clearfix">
-        <button class="pageBtn" id="pre" onclick="pageLoad(1)">
-            上一页
+    <div id="editBtnContainer" class="clearfix">
+        <button id="addBtn" onclick="showAddPanel()">
+            添加
         </button>
+        <div id="pageBtnContainer">
+            <button class="pageBtn" id="pre" onclick="pageLoad(1)">
+                上一页
+            </button>
 
-        <button class="pageBtn" id="next" onclick="pageLoad(0)">
-            下一页
-        </button>
+            <button class="pageBtn" id="next" onclick="pageLoad(0)">
+                下一页
+            </button>
+        </div>
     </div>
     <div id="funcBtnContainer" class="clearfix">
         <button id="saveBtn" class="funcBtn" onclick="saveData()">
@@ -86,6 +104,7 @@
                 </button>
             </span>
     </div>
+
 </div>
 </body>
 </html>

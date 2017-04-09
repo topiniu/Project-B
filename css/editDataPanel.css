@@ -84,13 +84,20 @@
     clear: both;
     height:0;
 }
-#pageBtnContainer{
+#editBtnContainer{
 
     width: 30%;
     position: relative;
     left: 50%;
     transform: translate(-50%);
     height: 30px;
+}
+#addBtn{
+    width:100%;
+    height:30px;
+}
+#pageBtnContainer{
+    margin:10px;
 }
 .pageBtn{
     width:49%;
@@ -106,6 +113,7 @@
 }
 #funcBtnContainer{
     position: relative;
+    margin-top:3em;
     width:50%;
     left:50%;
     transform: translate(-45%);
@@ -154,6 +162,21 @@
 
 @media screen and (max-width:767px) {
 
+    #funcBtnContainer{
+        margin-top:5em;
+        width:100%;
+    }
+    .funcBtn{
+        margin-top:0;
+    }
+    #addPanel .box{
+        width:80% !important;
+    }
+
+    #addPanel .btnBox{
+        width:100% !important;
+    }
+
     #rowContainer {
         width: 100%;
     }
@@ -167,4 +190,51 @@
     position: absolute;
     width: 100%;
     bottom: -100px;
+}
+
+#addPanel{
+    position: fixed;
+    width:100%;
+    height:100%;
+
+    background-color: rgba(225,225,225,0.6);
+    z-index: 9;
+
+    display: none;
+
+}
+#addPanel .box{
+    width:400px;
+    background-color: white;
+
+    border-radius:10px;
+    position: relative;
+    left:50%;
+    top:50%;
+    padding:30px;
+    transform: translate(-50%,-50%);
+}
+
+#addPanel .box input{
+    font-size:2em;
+    width:100%;
+    height:100px;
+}
+#addPanel .btnBox{
+    width:404px;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+#addPanel button{
+    width:49%;
+    height:30px;
+}
+#addPanel button:nth-child(2){
+    float: right;
+}
+#showMeddage{
+    position: absolute;
+    font-size: 1.2em;
+    color: #cc0000;
+    display: none;
 }
