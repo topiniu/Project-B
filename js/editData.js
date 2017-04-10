@@ -1,53 +1,62 @@
 /**
  * Created by topiniu on 2017/4/8.
  */
-function editData(){
-    getData();
+var pageSize = 0;
+var pageNum = 1;
+var total = 0;
+var con = null;
+function editData() {
+    // getData();
+    pageSize = data.length / 10;
+    if (String(pageSize).indexOf(".") > -1) {
+        // console.log("小数");
+        pageSize = parseInt(pageSize);
+        pageSize++;
+    }
+    // console.log(pageSize);
     $(".userPanel").hide("fast");
     $("#editPanel").fadeIn("fast");
 
-    pageLoad(0);
+    pageLoad();
 }
-var pageFlag = 0;
-function pageLoad(flag){
-
-
-
-    var con = $("#rowContainer");
+function pageLoad(){
+    con = $("#rowContainer");
     con.empty();
 
-    if(flag===1){
-        pageFlag-=20;//上一页
-        if(pageFlag<0)//进行删除操作时length减小
-            pageFlag=0;
-    }else{
-        // pageFlag=0;
-    }
-
-    for(var i = pageFlag;pageFlag<data.length && pageFlag<i+10;pageFlag++){
-        // console.log("pageFlag="+pageFlag+"   data[pageflag]="+data[pageFlag]);
+    total = pageNum * 10;
+    for(var i=(pageNum-1)*10;i<data.length && i<total;i++){
         var row = $("#tele").clone(true);
         row.attr("id","");
 
-        row.children("span").children("input").val(data[pageFlag]);
-        row.children("span").children("input").attr("id","index_"+pageFlag);
-        row.children("span").attr("data-index",pageFlag);
+        row.children("span").children("input").val(data[i]);
+        row.children("span").children("input").attr("id","index_"+i);
+        row.children("span").attr("data-index",i);
         con.append(row);
     }
-    if(pageFlag===data.length){
+    if(pageNum===pageSize){
         $("#next").hide();
     }else{
         $("#next").fadeIn();
     }
 
 
-    if(pageFlag<=10){
+    if(pageNum===1){
         $("#pre").hide();
     }else{
         $("#pre").fadeIn();
     }
 
     $("#rowContainer").fadeIn();
+}
+
+function　pageTran(i){
+    if( i===1 && pageNum<pageSize){
+        pageNum++;
+        pageLoad();
+    }else if(i===-1 && pageNum>1){
+        pageNum--;
+        pageLoad();
+    }
 }
 function edit(e,flag){
     var index = $(e).parent().attr("data-index");
