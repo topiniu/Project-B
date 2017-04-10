@@ -4,19 +4,21 @@
 var data = [];
 function getData(){
     var xhr = new XMLHttpRequest();
-    xhr.open("POST","http://localhost:8080/Project_B/ajax/getData",true);
+    xhr.open("POST","http://23.106.158.25:8080/Project_BackSky/ajax/getData",true);
     xhr.onreadystatechange = function(){
         if(xhr.readyState===4 && xhr.responseText != ""){
+            console.log(xhr.responseText);
             data = (xhr.responseText).split(",");
             // console.log(data);
         }
     }
 
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
     xhr.send(null);
 }
 function saveData(){
     var xhr = new XMLHttpRequest();
-    xhr.open("POST","http://localhost:8080/Project_B/ajax/writeData",true);
+    xhr.open("POST","http://23.106.158.25:8080/Project_BackSky/ajax/writeData",true);
     xhr.onreadystatechange = function(){
         if(xhr.readyState===4){
             alert(xhr.responseText);
